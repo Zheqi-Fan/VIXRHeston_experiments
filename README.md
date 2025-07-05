@@ -4,6 +4,8 @@ Implementation of pricing VIX term structure under SV models (INCOMPLETE version
 ## Description of each file
 
   - utils: functions to compute model-based VIX term structure under LHeston;
+
+  - approx for rHeston: illustrations to show the convergence of VIX under LHeston to that under rHeston
   
   - estimation_LHeston-2011: details of parameter estimation for LHeston model using VIX term structure data for the whole period;
 
