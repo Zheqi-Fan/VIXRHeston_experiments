@@ -1,5 +1,5 @@
-# VIX_LHeston
-Implementation of pricing VIX term structure under SV models (INCOMPLETE version)
+# VIX_RHeston
+Implementation of pricing VIX term structure under rough Heston and traditional affine jump diffusion models (INCOMPLETE version)
 
 ## Description of each file
 
