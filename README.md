@@ -1,7 +1,7 @@
-# VIX_RHeston 📊
+# 📊 VIX_RHeston 
 Implementation of pricing VIX term structure under rough Heston and traditional affine jump diffusion models (INCOMPLETE version)
 
-## Description of each file 📁
+## 📁 Description of each file 
 
   - `utils`: 🧮 Core functions to compute model-based VIX term structure under the lifted Heston (LHeston) model, including analytical squared VIX calculations, parameter sensitivity derivatives, and efficient numerical helpers;
 
@@ -9,7 +9,7 @@ Implementation of pricing VIX term structure under rough Heston and traditional 
   
   - `estimation_LHeston-2011`: ⚙️ Detailed parameter estimation workflow for the LHeston model, leveraging daily VIX term structure data (2011–2019) and an iterative two-step calibration procedure with analytical gradients;
 
-## What we do ✨
+## ✨ What we do 
   - 📏 Derived a **closed-form analytical formula** for squared VIX under the RHeston model (via multi-factor Markovian approximation), validated via degenerated cases, Monte Carlo simulation;
   - 🚀 Designed an efficient simulation scheme for VIX derivatives (e.g., futures, call options) by integrating the analytical VIX formula with Monte Carlo methods, replacing computationally expensive nested simulation;
   - 📊 Conducted comprehensive empirical analysis (nine year VIX term structure data: 1M/2M/3M/6M/9M/12M maturities) comparing pricing performance across Heston, Bates, HestonCJ (SVCJ), and RHeston models;
