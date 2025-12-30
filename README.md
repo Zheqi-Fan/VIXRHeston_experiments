@@ -1,14 +1,19 @@
-# VIX_RHeston
+# VIX_RHeston 📊
 Implementation of pricing VIX term structure under rough Heston and traditional affine jump diffusion models (INCOMPLETE version)
 
-## Description of each file
+## Description of each file 📁
 
-  - utils: functions to compute model-based VIX term structure under LHeston;
+  - `utils`: 🧮 Core functions to compute model-based VIX term structure under the lifted Heston (LHeston) model, including analytical squared VIX calculations, parameter sensitivity derivatives, and efficient numerical helpers;
 
-  - approx for rHeston: illustrations to show the convergence of VIX under LHeston to that under rHeston. For implementations of rHetson, I refer to [Prof. Jacquier's Github](https://github.com/JackJacquier). Comparisons are shown in rHestonMGF_compare.ipynb.
+  - `approx for rHeston`: 📈 Visualization illustrations demonstrating the convergence of VIX term structure under the LHeston model to the rough Heston (rHeston) model. For full rHeston implementations, refer to [Prof. Jacquier's Github](https://github.com/JackJacquier). Comparative analysis (via moment generating function validation) is presented in `rHestonMGF_compare.ipynb`;
   
-  - estimation_LHeston-2011: details of parameter estimation for LHeston model using VIX term structure data for the whole period;
+  - `estimation_LHeston-2011`: ⚙️ Detailed parameter estimation workflow for the LHeston model, leveraging daily VIX term structure data (2011–2019) and an iterative two-step calibration procedure with analytical gradients;
 
-## What we do
-  - Derived an analytical formula of VIX under LHeston model, which can be seen as an analytical approximation for pricing VIX under rHeston model (the formula is verified through degenerated cases and Monte Carlo simulation);
-  - Conducted empirical analysis by comparing the pricing performance of the VIX term structure for several commonly used continuous-time stochastic volatility models, including Heston, Bates, SVCJ, and LHeston.
+## What we do ✨
+  - 📏 Derived a **closed-form analytical formula** for squared VIX under the RHeston model (via multi-factor Markovian approximation), validated via degenerated cases, Monte Carlo simulation;
+  - 🚀 Designed an efficient simulation scheme for VIX derivatives (e.g., futures, call options) by integrating the analytical VIX formula with Monte Carlo methods, replacing computationally expensive nested simulation;
+  - 📊 Conducted comprehensive empirical analysis (nine year VIX term structure data: 1M/2M/3M/6M/9M/12M maturities) comparing pricing performance across Heston, Bates, HestonCJ (SVCJ), and RHeston models;
+  - 📈 Demonstrated that the RHeston (via LHeston) model outperforms traditional affine jump-diffusion models in **in-sample and out-of-sample fitting** (lower MAPE/RMSE), validated by Diebold-Mariano statistical tests, and provides more reliable implied spot volatility estimates;
+  - 🛡️ Robustness via subperiod analysis: Confirmed superior performance of rHeston even in crisis periods (2006–2011, including 2008 financial crisis) and showed that roughness better captures VIX term structure dynamics than jump components;
+  - 🔍 Proposed a framework to extract variance risk premium under the LHeston model, linking risk-neutral and physical dynamics via explicit pricing kernel specification;
+  - 📉 Utilized an iterative two-step calibration procedure (with analytical gradients) to estimate model parameters and latent spot volatilities, ensuring stability and accuracy across long time horizons.
