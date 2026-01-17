@@ -8,6 +8,7 @@ Implementation of pricing VIX term structure under rough Heston and traditional 
   - `approx for rHeston`: 📈 Visualization illustrations demonstrating the convergence of VIX term structure under the LHeston model to the rough Heston (rHeston) model. For full rHeston implementations, refer to [Prof. Jacquier's Github](https://github.com/JackJacquier). Comparative analysis (via moment generating function validation) is presented in `rHestonMGF_compare.ipynb`;
   
   - `estimation_RHeston-2011`: ⚙️ Detailed parameter estimation workflow for the RHeston model, leveraging daily VIX term structure data (2011–2019) and an iterative two-step calibration procedure with analytical gradients;
+  - TBA
 
 ## ✨ What we do 
   - 📏 Derived a **closed-form analytical formula** for squared VIX under the RHeston model (via multi-factor Markovian approximation), validated via degenerated cases, Monte Carlo simulation;
