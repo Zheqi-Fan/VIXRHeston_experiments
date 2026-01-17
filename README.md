@@ -18,3 +18,6 @@ Implementation of pricing VIX term structure under rough Heston and traditional 
   - 🛡️ Robustness via subperiod analysis: Confirmed superior performance of rHeston even in crisis periods (2006–2011, including 2008 financial crisis) and showed that roughness better captures VIX term structure dynamics than jump components;
   - 🔍 Proposed a framework to extract variance risk premium under the LHeston model, linking risk-neutral and physical dynamics via explicit pricing kernel specification;
   - 📉 Utilized an iterative two-step calibration procedure (with analytical gradients) to estimate model parameters and latent spot volatilities, ensuring stability and accuracy across long time horizons.
+
+## 📚 References
+Ye, Y., Fan, Z., & Kwok, Y. K. (2026), "VIX term structure in the rough Heston model via Markovian approximation ", *Journal of Futures Markets*, Forthcoming.
