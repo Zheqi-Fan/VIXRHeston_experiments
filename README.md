@@ -1,4 +1,4 @@
-# 📊 VIX_RHeston 
+# 📊 VIXRHeston_experiments 
 Implementation of pricing VIX term structure under rough Heston and traditional affine jump diffusion models (INCOMPLETE version)
 
 ## 📁 Description of each file 
