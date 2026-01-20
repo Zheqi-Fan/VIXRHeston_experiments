@@ -1,6 +1,9 @@
 # 📊 VIXRHeston_experiments 
 Implementation of pricing VIX term structure under rough Heston and traditional affine jump diffusion models (INCOMPLETE version)
 
+## 📦 Python package (PyPI)
+The Python package is available on PyPI: [VIXRHeston](https://pypi.org/project/VIXRHeston/)
+
 ## 📁 Description of each file 
 
   - `utils`: 🧮 Core functions to compute model-based VIX term structure under the lifted Heston (LHeston) model, including analytical squared VIX calculations, parameter sensitivity derivatives, and efficient numerical helpers;
